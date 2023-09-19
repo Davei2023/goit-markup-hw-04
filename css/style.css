@@ -129,14 +129,22 @@ gap: 40px;
   /*effective-section*/
   
   .effective-section {
-    background-color: var(--color-prymary);
     font-size: 56px;
     letter-spacing: 0.02em;
     text-align: center;
     line-height: 1.07;
     padding: 188px 0 ;
+    max-width: 1440px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat ;
+    margin: 0 auto;
+    background-image:url('../images/fonicons.jpg'),
+    linear-gradient(
+    rgba(46, 47, 66, 0.70),
+    rgba(46, 47, 66, 0.70)
+    );
   }
-
 
   .hiro-title {
     color: var(--color-non);
@@ -204,6 +212,19 @@ gap: 40px;
 
   .tabl-list {
     width: calc((100% - 72px) / 4);
+  }
+
+  .list-svg {
+    display: flex;
+    width: 264px;
+    height: 112px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid var(--LIGHT-SLATE, #8E8F99);
+    background: var(--CLOUD, #F4F4FD);  
+    text-align: center;
+    padding: 24px 100px;
+    margin-bottom:8px;
   }
 
   .dok-startegy {
@@ -279,8 +300,16 @@ gap: 40px;
     letter-spacing: 0.02em;
     font-size: 16px;
     text-align: center;
+    margin-bottom: 8px;
   }
   
+  .svg-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+
   /*our-porfolio*/
   
   .ourportfolio-section {
@@ -368,6 +397,10 @@ gap: 40px;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
+  }
+
+  .svg-foter{
+    text-align: center;
   }
 
   .paragraf-futer {
