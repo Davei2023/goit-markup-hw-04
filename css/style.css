@@ -7,6 +7,8 @@
     --color-non: #FFFFFF;
     --color-imag: #E7E9FC;
     --color-web: #4d5ae5;
+    --color-nav: #404bbf;
+    --color-ger:#31d0aa;
   }
   
 *,
@@ -42,6 +44,7 @@
 
 .header {
    border-bottom: 1px solid var(--color-imag);
+   box-shadow: 0px 1px 1px rgba(46, 47, 66, 0.16);
 }
 
 .container {
@@ -82,9 +85,18 @@ gap: 40px;
     text-transform: uppercase;
     font-size: 18px;
     margin-right: 76px;
-
+    position: relative;
+    color:var(--color-nav);   
   }
-  
+  ::after::content {
+    position: absolute,
+    left 0;
+    bottom: -1px;
+    height: 4px;
+    background-color:var(--color-nav);
+    border-radius: 2px;
+  }
+
   .logo-web {
     color: var(--color-prymary);
     font-family: 'Raleway', sans-serif;
@@ -101,7 +113,7 @@ gap: 40px;
     font-size: 16px;
     display: block;
     padding: 24px 0;
-  
+    transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1)
   }
   
   .anav-priority:hover,
@@ -115,6 +127,7 @@ gap: 40px;
     font-weight: 500;
     line-height: 1.5;
     font-size: 16px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .nav-mailto:hover,
@@ -139,11 +152,10 @@ gap: 40px;
     background-position: center;
     background-repeat: no-repeat ;
     margin: 0 auto;
-    background-image:url('../images/fonicons.jpg'),
-    linear-gradient(
-    rgba(46, 47, 66, 0.70),
-    rgba(46, 47, 66, 0.70)
-    );
+    background-image: 
+    linear-gradient(rgba(46, 47, 66, 0.7), 
+    rgba(46, 47, 66, 0.7)), 
+    url(../images/img-name.jpg);
   }
 
   .hiro-title {
@@ -174,6 +186,7 @@ gap: 40px;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    background-color:250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .button-ven:hover,
@@ -225,6 +238,8 @@ gap: 40px;
     text-align: center;
     padding: 24px 100px;
     margin-bottom:8px;
+    align-items: center;
+    justify-content: center;
   }
 
   .dok-startegy {
@@ -302,12 +317,33 @@ gap: 40px;
     text-align: center;
     margin-bottom: 8px;
   }
-  
-  .svg-logo{
+  .fons-svg {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 24px;
+  }
+
+  .image-svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .image-fons {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .image-fons:hover,:focus {
+    background-color: #404bbf;
+  }
+  
+  .fons {  
+    fill: #F4F4FD;
   }
 
   /*our-porfolio*/
@@ -345,13 +381,40 @@ gap: 40px;
   .image-portfolio {
   width: calc((100% - 48px) / 3);
   }
-  
+   
+  .image-portfolio:hover {
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+  .foto-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
   .image-tabl {
     display: block;
     max-width: 100%;
     height: auto;
-
+    box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+  .hover-paragraf {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--color-secondary);
+    padding: 40px 32px;
+    background-color: #4d5ae5;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+  .image-tabl:hover {
+  transform: translateY(0%);
+}
 
   .text-screen {
     color: var(--color-prymary);
@@ -373,6 +436,11 @@ gap: 40px;
   
   /*footer*/
   
+  .content {
+    display: flex;
+    align-items: baseline;
+  }
+
   .footer {
     background-color: var(--color-prymary);
     padding: 100px 0
@@ -399,8 +467,18 @@ gap: 40px;
     letter-spacing: 0.03em;
   }
 
-  .svg-foter{
-    text-align: center;
+ .foter-info {
+  margin-right: 120px
+ }
+
+  .foter-div {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .div-foter{
+    display: flex;
+    align-items: baseline;
   }
 
   .paragraf-futer {
@@ -408,4 +486,41 @@ gap: 40px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     max-width: 264px;
+  }
+
+  .paragraf {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color:var(--color-non);
+    margin-bottom: 16px;
+  }
+
+  .foter-svg {
+    display: flex;
+    gap: 16px;
+    }
+
+  .tabl-foter {
+    width: 40px;
+    height: 40px;
+  }
+
+  .foter-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-von);
+    border-radius:50%;
+  }
+
+  .foter-link:hover,:focus {
+    background-color:var(--color-ger);
+  }
+
+  .icons-foter {
+    fill: var(--color-secondary);
   }
