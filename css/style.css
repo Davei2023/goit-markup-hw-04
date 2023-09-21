@@ -357,7 +357,7 @@ gap: 40px;
     background-color: var(--color-nav);
   }
 
-  .image-fons:focus{
+  .image-fons:focus {
     background-color: var(--color-nav);
   }
 
@@ -406,7 +406,7 @@ gap: 40px;
   box-shadow:  0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
  }
 
-  .foto-hover {
+  .foto-blok {
     position: relative;
     overflow: hidden;
   }
@@ -418,7 +418,7 @@ gap: 40px;
     box-shadow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .hover-paragraf {
+  .foto-paragraf {
     position: absolute;
     top: 0;
     font-size: 16px;
@@ -433,7 +433,7 @@ gap: 40px;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
       }
 
-.hover-paragraf:hover {
+  .foto-paragraf:hover {
   transform: translateY(0%);
 }
 
